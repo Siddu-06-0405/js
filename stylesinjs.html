@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styles using JS</title>
+    <style>
+        #special{
+            color: blue;
+        }
+        .one{
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="special" class="one">Hello World!</h1>
+    <img src="C:\Users\csidd\OneDrive\Pictures\anime\sukuna.jpg" id="img1">
+    <script> 
+        var x=document.getElementById("img1");
+        x.style.width="1500px"
+        x.style.height="700px";
+        var y=document.getElementById("special")
+        y.style.color="pink"
+        y.style.border="3px solid black"
+
+        //x.setAttribute('src','C:/Users/csidd/OneDrive/Pictures/anime/friend.jpeg')
+    </script>
+    
+</body>
+</html>

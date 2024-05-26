@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #special{
+            position:absolute;
+            top: 40%;
+            left:40%;
+        }
+        #sp{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="special">
+        Name: <input id = "sp" type="text" /><br><br>
+        <button id = "b1" onclick="document.body.style.backgroundColor='red'">change background</button>
+        <button id = "b2" onclick="document.body.style.backgroundColor='white'"> default</button>
+    </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #special{
+            position:absolute;
+            top: 40%;
+            left:40%;
+        }
+        #sp{
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div id="special">
+        Name: <input id = "name" type="text" onclick="change()" style="font-weight: 500;"/><br><br>
+        <button id = "b1" style = "cursor :pointer;" onclick="page()">change background</button>
+        <button id = "b2" onclick="document.body.style.backgroundColor='white'"> default</button>
+    </div>
+    <script>
+        function  change(){
+            
+            fn.style.backgroundColor="red"
+        }
+        var fn=document.getElementById("name");
+        fn.addEventListener('focus',change);
+        function page(){
+            var letters='0123456789ABCDEF'
+            var  color='#';
+            for(var i=0;i<6;i++){
+                var r=Math.floor(Math.random()*16);
+                color=color+letters[r]
+        }
+        document.body.style.background=color
+        var s=document.getElementById("name")
+        s.onfocus=chnage2
+        s.onblur=chnage3
+        function chnage2(){
+           s.style.backgroundColor='grey'
+        }
+        function chnage3(){
+            s.style.backgroundColor='white'
+        }
+        }
+    </script>
+</body>
+</html>
