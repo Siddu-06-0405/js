@@ -17,6 +17,7 @@ app.get("/",(req,res)=>{
     if (hkidneys[0].healthy){
         numOfHealthyKidneys = numOfHealthyKidneys+1;
     }
+    // res.send("hello")
     var numOfUnhealthyKidneys = numOfKidneys - numOfHealthyKidneys;
     res.json({
         numOfKidneys,
