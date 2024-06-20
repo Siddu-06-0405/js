@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <br><center><h2>JavaScript HTML DOM</h2></center><br>
+    <center>Finding HTML elements by Class Name</center><br>
+    <center>
+        <h3>wait for 7 seconds</h3>
+        <p class="intro">Hello World!</p>
+        <p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+    </center>
+    <center><t id="demo"></t></center>
+    <script>
+        const x = document.getElementsByClassName("intro");
+        document.getElementById("demo").innerHTML = 'The first paragraph (index) with class = "intro" is : '+ x[0].innerHTML
+        var paragraphs = document.querySelectorAll('p');
+        paragraphs.forEach(para=>para.style.padding = '3%')//px is not working.
+        paragraphs.forEach(para=>{
+            para.style.marginLeft = '30%';
+            para.style.marginRight = '30%';
+        })
+        // setInterval(()=>{paragraphs.forEach(paragraph => paragraph.style.backgroundColor ='red')},3000)
+        // setInterval(()=>{paragraphs.forEach(paragraph => paragraph.style.backgroundColor ='yellow')},5000)
+        // setInterval(()=>{paragraphs.forEach(paragraph => paragraph.style.backgroundColor ='green')},7000)
+        function m(){
+            function q(){
+                setTimeout(()=>{paragraphs.forEach(paragraph => paragraph.style.backgroundColor ='red')},2000)
+            }
+            function w(){
+                setTimeout(()=>{paragraphs.forEach(paragraph => paragraph.style.backgroundColor ='yellow')},4000)
+            }
+            function e(){
+                setTimeout(()=>{paragraphs.forEach(paragraph => paragraph.style.backgroundColor ='green')},6000)
+            }
+            q()
+            w()
+            e()
+        }
+        setInterval(m,7000)
+
+    </script>
+</body>
+</html>
