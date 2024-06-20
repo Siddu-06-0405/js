@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const jwtPassword = "123456";
 
 const app = express();
-
+app.use(express.json());
 const ALL_USERS = [
   {
     username: "harkirat@gmail.com",
@@ -25,8 +25,16 @@ const ALL_USERS = [
 function userExists(username, password) {
   // write logic to return true or false if this user exists
   // in ALL_USERS array
+  //hard todo - try to use find function in js
+  let userExists = false;
+  for (let i = 0;i<ALL_USERS.length;i++){
+    if(ALL_USERS[i].username==username && ALL_USERS[i].password==password){
+      userExists = true;
+    }
+  }
+  return userExists;
 }
-
+//create a signup endpoint here for furthermore developments
 app.post("/signin", function (req, res) {
   const username = req.body.username;
   const password = req.body.password;
@@ -37,7 +45,7 @@ app.post("/signin", function (req, res) {
     });
   }
 
-  var token = jwt.sign({ username: username }, "shhhhh");
+  var token = jwt.sign({ username: username }, jwtPassword);
   return res.json({
     token,
   });
