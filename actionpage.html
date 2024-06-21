@@ -1,16 +1,16 @@
-<center><p style="transform: translateY(50%);font-size: 5rem;">Nigg@ go to previous page</p></center>
+<center><p style="transform: translateY(50%);font-size: 3rem;">Nigg@ go to previous page</p></center>
 <center>
-    <p id="ohno"></p>
+    <div id="ohno"></div>
 </center>
 <script>
     const guilt = document.getElementById("ohno");
     function q(){
         function w(){
-            guilt.innerHTML = "<br><br><br>Just Die";
+            guilt.innerHTML = "<br><br><br><button>Just Die</button>";
         }
         setInterval(w, 3000);
         function e(){
-            guilt.innerHTML = "<br><br><br>All is well";
+            guilt.innerHTML = "<br><br><br><button>All is well</button>";
         }
         setInterval(e, 2000);
     }
