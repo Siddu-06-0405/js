@@ -15,4 +15,14 @@
         setInterval(e, 2000);
     }
     q();
+    document.addEventListener("visibilitychange",function(){
+        if(document.visibilityState === "visible"){
+            console.log("The tab is active.");
+            document.title = "Yokoso"
+        }
+        else{
+            console.log("The tab is inactive.");
+            document.title = "yare yare"
+        }
+    })
 </script>
