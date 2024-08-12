@@ -34,7 +34,7 @@ console.log(lines);
 //   console.log('File written successfully with correct EOL!');
 // });
 
-//example 2
+// example 2
 const configTemplate = [
   'host=localhost',
   'port=8080',
@@ -44,4 +44,3 @@ const configTemplate = [
 
 console.log('Generated config:');
 console.log(configTemplate);
-
