@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 id="name" style="font-size: 20px;font-style: italic;">Aizen Sosuke</h1>
+        <code>Size of the text above is : <code id="pixel">20</code></code><br><br>
+        <button id="btn">Resize Name</button>
+    </center>
+    <script>
+        var btn = document.getElementById("btn");
+        var namee = document.getElementById("name");
+        var desc = document.getElementById("pixel")
+        btn.addEventListener("click", function() {
+            const size = parseInt(prompt("Enter your desired size in pixels"));
+            console.log(typeof(size),size);
+            if (!isNaN(size) && size > 0) { // Ensure the input is a valid number
+                namee.style.fontSize = `${size}px`;
+                desc.innerText = size;
+            } else {
+                alert("Please enter a valid number greater than 0.");
+            }
+        });
+    </script>
+</body>
+</html>
